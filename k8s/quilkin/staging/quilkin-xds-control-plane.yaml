@@ -149,8 +149,8 @@ spec:
           env:
             - name: RUST_LOG
               value: info,quilkin=trace
-          # Pour Quilkin c'est le commitsha exact
-          image: ghcr.io/embarkstudios/quilkin:0.10.0-5d7c1bf
+          # Pour Quilkin v0.10.0 (c'est le commitsha exact de la version release Quilkin v0.10.0)
+          image: ghcr.io/embarkstudios/quilkin:0.10.0-ff0fcef
           # (volumeMounts) Pour Quilkin v0.10.0
           volumeMounts:
             - name: quilkin-config
