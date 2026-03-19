@@ -4,12 +4,12 @@ apiVersion: "allocation.agones.dev/v1"
 kind: GameServerAllocation
 metadata:
   name: test-allocation
-  namespace: gameservers   # ← IMPORTANT : doit être le même que celui de la flotte ciblée
+  namespace: staging-aetherroyale-agones-gameservers   # ← IMPORTANT : doit être le même que celui de la flotte ciblée
 spec:
   selectors:
     - matchLabels:
-        # Nom exact de la flotte (Fleet) ciblée pour l'allocation d'un GameServer dans la flotte "fleet-aetherroyale-game-server" créée précédemment.
-        agones.dev/fleet: fleet-aetherroyale-game-server
+        # Nom exact de la flotte (Fleet) ciblée pour l'allocation d'un GameServer dans la flotte créée précédemment.
+        agones.dev/fleet: staging-fleet-aetherroyale
   metadata:
     annotations:
       # L'ensemble des jetons d'accès pour le point de terminaison associé peut être défini 
