@@ -144,13 +144,13 @@ spec:
           args:
             - --service.xds
             - --provider.k8s.agones
-            - --provider.k8s.agones.namespace=gameservers # Important : Par défault quilkin recherche les instances des GameServer ou Fleet dans le namespace "default", on peux le changer ici.
+            - --provider.k8s.agones.namespace=staging-aetherroyale-gameservers # Important : Par défault quilkin recherche les instances des GameServer ou Fleet dans le namespace "default", on peux le changer ici.
             - --config=/etc/quilkin/quilkin.yaml
           env:
             - name: RUST_LOG
               value: info,quilkin=trace
-          # Pour Quilkin v0.10.0 (c'est le commitsha exact de la version release Quilkin v0.10.0)
-          image: ghcr.io/embarkstudios/quilkin:0.10.0-ff0fcef
+          # Pour Quilkin c'est le commitsha exact
+          image: ghcr.io/embarkstudios/quilkin:0.10.0-5d7c1bf
           # (volumeMounts) Pour Quilkin v0.10.0
           volumeMounts:
             - name: quilkin-config
